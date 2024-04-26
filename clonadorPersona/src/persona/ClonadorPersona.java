@@ -36,13 +36,13 @@ public class ClonadorPersona {
 
 		for (int i = 0; i < 10; i++) {
 
-			Persona p = FactoryPersona.getPersona(nombre);
+			try {
 
-			boolean personaValida = ValidadorPersona.isValid(p);
-
-			if (personaValida) {
-
+				Persona p = FactoryPersona.getPersona(nombre);
 				personas.add(0, p);
+			}
+
+			catch (Exception e) {
 
 			}
 
