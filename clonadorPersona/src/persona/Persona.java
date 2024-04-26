@@ -24,6 +24,14 @@ public class Persona {
 		this.edad = edad;
 	}
 
+	
+
+	public Persona() {
+		// TODO Auto-generated constructor stub
+	}
+
+
+
 	/**
 	 * getter para recoger un nombre
 	 * @return nombre

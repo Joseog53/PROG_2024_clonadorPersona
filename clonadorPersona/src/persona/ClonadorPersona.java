@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+import utilidades.FactoryPersona;
+
 public class ClonadorPersona {
 
 	private String nombre;
@@ -29,21 +31,13 @@ public class ClonadorPersona {
 
 		List<Persona> personas = new ArrayList<Persona>();
 
-		Random random = new Random();
+		
 
 		for (int i = 0; i < 10; i++) {
 
-			String nombre = "Persona" + (i + 1);
-
-			int edad = random.nextInt() * 100;
-
-			int peso = random.nextInt() * 100;
-
-			int altura = random.nextInt() * 200;
-
-			Persona persona = new Persona(nombre, edad, peso, altura);
-
-			personas.add(persona);
+			Persona p = FactoryPersona.getPersona( nombre);
+			
+			personas.add(0,p);
 		}
 
 		return personas;
